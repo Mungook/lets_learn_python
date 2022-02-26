@@ -27,11 +27,9 @@ cv2. namedWindow('screen')
 while 1:
     cap = cv2.VideoCapture(0)
     ret,frame = cap.read()
-    if not ret:
-        break
     
     cv2.imshow('screen',frame)
-    screen = ImageGrab.grab('screen') # 화면 캡쳐
+    screen = ImageGrab.grab() # 화면 캡쳐
     print(screen.getpixel(pyautogui.position()))#현재의 마우스 위치의 색상 출력.q
     #print(rgb_to_hsv(screen.getpixel(pyautogui.position())))
     
