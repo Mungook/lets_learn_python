@@ -6,7 +6,7 @@ import cv2
 lower = np.array([0, 48, 80], dtype = "uint8")
 upper = np.array([20, 255, 255], dtype = "uint8")
 
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 
 while True:
         

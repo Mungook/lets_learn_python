@@ -22,7 +22,7 @@ def rgb_to_hsv(r, g, b):
     v = mx*100
     return h, s, v
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)    #해결방법 검색하니까 바로 제일 위에 나오던데? https://unie2.tistory.com/328
+cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)    #해결방법 검색하니까 바로 제일 위에 나오던데? https://unie2.tistory.com/328
                                             #그리고 이 라인은 while 안에 넣으면 급격히 느려짐 매 루프마다 웹캠을 변수에 넣는거라
 cv2.namedWindow('screen')
 
