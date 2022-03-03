@@ -22,7 +22,9 @@ while True:
                 cx, cy = int(lm.x * width), int(lm.y * height)
                 cv2.circle(img, (cx, cy), 10, (255, 0, 255), cv2.FILLED)
             mp_draw.draw_landmarks(img, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+            print(MULTI_HAND_LANDMARKS)
 
     cv2.imshow("Image", img)
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        print 
         break

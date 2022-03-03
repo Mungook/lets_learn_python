@@ -31,10 +31,11 @@ with mp_hands.Hands(
       for hand_landmarks in results.multi_hand_landmarks:
         # Here is How to Get All the Coordinates
         for ids, landmrk in enumerate(hand_landmarks.landmark):
-            # print(ids, landmrk)
-            cx, cy = landmrk.x * image_width, landmrk.y*image_height
-            print(cx, cy)
-            # print (ids, cx, cy)
+            #print(ids, landmrk)
+            if ids == 8 :
+              cx, cy = landmrk.x * image_width, landmrk.y*image_height
+              print(cx, cy)
+              # print (ids, cx, cy)
         mp_drawing.draw_landmarks(
             image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
     cv2.imshow('MediaPipe Hands', image)
