@@ -64,12 +64,13 @@ def mouse_callback(event, x, y, flags, param):
 
 cv.namedWindow('img_color')
 cv.setMouseCallback('img_color', mouse_callback)
+cap = cv.VideoCapture(0,cv.CAP_DSHOW)
 
 
 
 while(True):
-    cap = cv.VideoCapture(0,cv.CAP_DSHOW)
-    ret,frame = cap.read()
+
+    _,frame = cap.read()
     #cv.imshow('img_color',frame)
     img_color = frame
     height, width = img_color.shape[:2]
@@ -95,3 +96,5 @@ while(True):
 
 cap.release()
 cv.destroyAllWindows()
+
+#https://velog.io/@nayeon_p00/OpenCV-Python-%EB%A7%88%EC%9A%B0%EC%8A%A4-%ED%81%B4%EB%A6%AD%EC%9C%BC%EB%A1%9C-%ED%8A%B9%EC%A0%95%EC%83%89-%EC%B6%94%EC%B6%9C%ED%95%98%EA%B8%B0
